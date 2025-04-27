@@ -3,7 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-OPENROUTER_API_KEY = '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'  
+OPENROUTER_API_KEY = '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
+'  
 OPENROUTER_MODEL = 'mistralai/mistral-small-24b-instruct-2501:free'  
 
 SYSTEM_PROMPT = """
