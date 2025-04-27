@@ -1,9 +1,127 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: powderblue;
-  }
-  h1 {
-    color: blue;
-  }
-  p {
-    color: red;
-  }
+  font-family: Arial, sans-serif;
+  background-image: url('https://img1.wsimg.com/isteam/stock/7gwre0j/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280'); /* Add your background image URL here */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 36px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.chat-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+}
+
+#userMessage {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#sendBtn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#sendBtn:hover {
+  background-color: #45a049;
+}
+
+.user-message,
+.bot-message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  max-width: 80%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+/* User message styling */
+.user-message {
+  background-color: #80bfff;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Bot message styling with image */
+.bot-message {
+  background-color: #d1f7c4;
+  align-self: flex-start;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+/* Profile image for bot */
+.bot-message img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Smooth transition for messages */
+.bot-message, .user-message {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
